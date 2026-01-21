@@ -1,40 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  /* Cores extraídas do manual Speed Café */
   --color-speed-red: #D63230;
   --color-speed-white: #EFEFEF;
-  --color-speed-black: #000000;
-  
-  /* Tipografia que remete à agilidade */
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 }
 
 @layer base {
   body {
-    @apply bg-speed-white text-speed-black antialiased;
+    @apply bg-[#EFEFEF] text-black antialiased;
     margin: 0;
-  }
-}
-
-/* Estilo para simular a "Textura Grunge" e Rusticidade do Manual */
-@layer components {
-  .card-speed {
-    @apply bg-white border-2 border-black p-8 transition-all duration-300;
-    box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 1);
-  }
-
-  .card-speed:hover {
-    @apply -translate-x-1 -translate-y-1;
-    box-shadow: 10px 10px 0px 0px rgba(214, 50, 48, 1);
-  }
-
-  .btn-speed {
-    @apply bg-speed-red text-white font-bold py-3 px-6 uppercase tracking-tighter transition-all;
-    clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%); /* Efeito de inclinação/velocidade */
-  }
-
-  .btn-speed:hover {
-    @apply bg-black scale-105;
   }
 }

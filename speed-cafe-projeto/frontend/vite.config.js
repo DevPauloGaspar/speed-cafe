@@ -1,18 +1,11 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite' // Importação oficial da v4
+import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [
     react(),
-    tailwindcss(), // Adicione o plugin do tailwind aqui!
+    tailwindcss(),
   ],
-  server: {
-    host: true,
-    strictPort: true,
-    port: 5173,
-    hmr: {
-      clientPort: 443
-    }
-  }
+  base: './', // <--- Adicione isso para o caminho ser relativo
 })
